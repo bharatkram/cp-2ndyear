@@ -7,4 +7,4 @@
 
 def handtodice(hand):
     # your code goes here
-    return tuple(string(hand).split(""))
+    return tuple(str(hand).split(""))
