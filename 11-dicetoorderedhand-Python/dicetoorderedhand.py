@@ -13,4 +13,4 @@
 
 def dicetoorderedhand(a, b, c):
     # your code goes here
-    return "".join(list(map(str, sorted([a, b, c], reverse=True))))
+    return int("".join(list(map(str, sorted([a, b, c], reverse=True)))))
