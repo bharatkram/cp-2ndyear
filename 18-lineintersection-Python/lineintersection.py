@@ -5,5 +5,5 @@
 # This function returns the x value of the point of intersection of the two lines. If the lines are parallel, or identical, the function should return None.
 
 def lineintersection(m1, b1, m2, b2):
-	# your code goes here
-	pass
+    # your code goes here
+    return ((b1 - b2) / (m2 - m1)) if max(m1, m2) % min(m1, m2) != 0 else None
