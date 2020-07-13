@@ -20,7 +20,7 @@ class Classy(object):
     def __init__(self):
         self.items = []
 
-    def Class(item, self):
+    def Class(self, item):
         self.items.append(item)
 
     def classiness(self):
