@@ -29,6 +29,6 @@ class Classy(object):
         for item in self.items:
             try:
                 score += itemsDict[item]
-            except:
+            except KeyError:
                 continue
         return score
