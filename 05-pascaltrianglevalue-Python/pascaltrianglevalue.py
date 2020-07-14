@@ -15,6 +15,6 @@ def fun_pascaltrianglevalue(row, col):
     # your code goes here
     if row < 0 or col < 0 or row + 1 < col:
         return 0
-        if row == 1:
-            return 1
+    if row == 1:
+        return 1
     return coeff(row - 1, col - 1) + coeff(row - 1, col)
