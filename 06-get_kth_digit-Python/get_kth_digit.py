@@ -6,6 +6,6 @@
 
 def fun_get_kth_digit(digit, k):
     # your code goes here.
-    if k % 10**digit == 0:
+    if digit / 10**k == 0:
         return 0
-    return (k // 10**digit) % 10
+    return (digit // 10**k) % 10
