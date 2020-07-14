@@ -3,9 +3,12 @@
 # it is an int that is a perfect square (that is, if there exists an integer m such that
 # m**2 == n), and False otherwise. Do not crash on non-ints nor on negative ints.
 
+
 def isperfectsquare(n):
-    # your code goes here
+    # your code goes here.
     try:
+        if not (isinstance(n, int) or isinstance(n, float)):
+            n = int(n)
         return int(n**0.5) == n**0.5
     except:
         return False
