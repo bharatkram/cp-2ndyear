@@ -8,4 +8,4 @@ def fun_get_kth_digit(digit, k):
     # your code goes here.
     if digit / 10**k == 0:
         return 0
-    return (digit // 10**k) % 10
+    return (abs(digit) // 10**k) % 10
