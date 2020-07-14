@@ -10,5 +10,4 @@ def fun_pascaltrianglevalue(row, col):
     # your code goes here
     if row < 0 or col < 0 or row + 1 < col:
         return 0
-    row = tuple(str(11**(row - 1)))
-    return int(row[col])
+    return row**col
