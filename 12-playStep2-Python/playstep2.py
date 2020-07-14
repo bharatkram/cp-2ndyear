@@ -32,8 +32,8 @@ def handtodice(hand):
     return tuple(map(int, tuple(str(hand))))
 
 
-def dicetoorderedhand(a, b, c):
-    return int("".join(list(map(str, sorted([a, b, c], reverse=True)))))
+def dicetoorderedhand(lis):
+    return int("".join(list(map(str, sorted(lis, reverse=True)))))
 
 
 def diction(hand):
@@ -62,3 +62,18 @@ def playstep2(hand, dice):
     hand = handtodice(hand)
 
     rep, Value = diction(hand)
+
+    if rep:
+        hand = [Value, Value]
+        newValue = dice % 10
+        dice //= 10
+        hand.append(newValue)
+        return (dicetoorderedhand(hand), dice)
+
+    else:
+        hand = [Value]
+        for i in range(2):
+            newValue = dice % 10
+            dice //= 10
+            hand.append(newValue)
+        return (dicetoorderedhand(hand), dice)
