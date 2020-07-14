@@ -29,15 +29,36 @@
 # Hint: Also, remember to use % to get the one's digit, and use //= to get rid of the one's digit.
 
 def handtodice(hand):
-    # your code goes here
     return tuple(map(int, tuple(str(hand))))
 
 
 def dicetoorderedhand(a, b, c):
-    # your code goes here
     return int("".join(list(map(str, sorted([a, b, c], reverse=True)))))
+
+
+def diction(hand):
+    handDict = {}
+    for item in hand:
+        if item not in handDict.keys():
+            handDict[item] = 1
+        else:
+            handDict[item] += 1
+
+    rep = False
+    maxValue = 0
+    repValue = 0
+    for key in handDict.keys():
+        if key > maxValue:
+            maxValue = key
+        if handDict[key] > 1:
+            rep = True
+            repValue = key
+
+    return (rep, repValue) if rep else (rep, maxValue)
 
 
 def playstep2(hand, dice):
     # your code goes here
     hand = handtodice(hand)
+
+    rep, Value = diction(hand)
