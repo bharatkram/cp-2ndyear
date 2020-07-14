@@ -10,4 +10,4 @@
 
 def numberofpoolballs(rows):
     # Your code goes here.
-    return sum([n for n in range(rows)])
+    return sum([n for n in range(rows + 1)])
