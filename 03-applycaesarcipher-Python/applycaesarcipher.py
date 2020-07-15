@@ -19,7 +19,7 @@ def applyCaesarCipher(char, shift):
         ele += shift
         return chr(ele + 26) if ele < 97 else chr(ele - 26) if ele > 122 else chr(ele)
     else:
-        return chr(char)
+        return char
 
 
 def fun_applycaesarcipher(msg, shift):
