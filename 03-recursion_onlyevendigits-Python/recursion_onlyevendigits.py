@@ -9,13 +9,19 @@
 # Remember to not use strings. You may not use loops/iteration in this problem.
 
 
-def onlyEvenDigits(lis, pos):
-    if pos >= len(lis):
-        return lis
-    lis[pos] = 0 if (lis[pos] % 2) != 0 else lis[pos]
-    return onlyEvenDigits(lis, pos + 1)
+def onlyEvenDigits(ele, div):
+    if ele % div == 0:
+        return ele
+    secPart = ele % div
+    firPart = ele // div
+    dig = secPart // (div/10)
+    if dig % 2 == 0:
+        return onlyEvenDigits(firPart*div+secPart, div*10)
+    else:
+        return onlyEvenDigits(firPart*(div/10)+secPart % (div/10), div)
 
 
 def fun_recursion_onlyevendigits(l):
     # Your code goes here
-    return onlyEvenDigits(l, 0)
+    l = [onlyEvenDigits(ele, 10) for ele in l]
+    return l
