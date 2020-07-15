@@ -30,9 +30,10 @@ def isprime(n):
 
 
 def fun_nth_happy_prime(n):
-    present = 7
-    while n != 0:
-        present += 1
-        if ishappynumber(n) and isprime(n):
+    present = 8
+    while True:
+        if n == 0:
+            return present - 1
+        if ishappynumber(present) and isprime(present):
             n -= 1
-    return present
+        present += 1
