@@ -9,4 +9,4 @@
 
 
 def fun_rectangle_overlap(left1, top1, width1, height1, left2, top2, width2, height2):
-    return left1 <= left2 <= width1 and top1 <= top2 <= height1
+    return left1 <= left2 <= left1 + width1 and top1 <= top2 <= top1 + height1
