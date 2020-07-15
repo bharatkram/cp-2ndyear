@@ -9,4 +9,4 @@ import math
 
 
 def fun_find_int_roots(a, b, c):
-    return sorted([int((-b / (2*a)) + (b**2 - 4*a*c)**0.5), int((-b / (2*a) - (b**2 - 4*a*c)**0.5))])
+    return sorted([round((-b / (2*a)) + (b**2 - 4*a*c)**0.5), round((-b / (2*a) - (b**2 - 4*a*c)**0.5))])
