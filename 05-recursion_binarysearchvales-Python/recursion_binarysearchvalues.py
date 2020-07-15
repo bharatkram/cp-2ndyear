@@ -21,7 +21,7 @@
 def binarySearchValues(lis, query, start, end, ret):
     pos = (end + start) // 2
     ele = lis[pos]
-    if start == pos:
+    if start == end:
         return ret
     ret.append((pos, ele))
     if ele == query:
