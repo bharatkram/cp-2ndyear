@@ -23,10 +23,11 @@ def ishappynumber(n):
 
 
 def isprime(n):
-    for i in range(1, int(n**0.5)):
+    for i in range(1, int(n**0.5) + 1):
         if n % i == 0:
             return False
-    return True
+    else:
+        return True
 
 
 def fun_nth_happy_prime(n):
@@ -34,6 +35,6 @@ def fun_nth_happy_prime(n):
     while True:
         if n == 0:
             return present - 1
-        if ishappynumber(present) and isprime(present):
+        if ishappynumber(present):
             n -= 1
         present += 1
