@@ -10,7 +10,7 @@
 
 
 def onlyEvenDigits(ele, div):
-    if ele % div == 0:
+    if ele // div == 0:
         return ele
     secPart = ele % div
     firPart = ele // div
