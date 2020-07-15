@@ -14,12 +14,12 @@ def applyCaesarCipher(char, shift):
     ele = ord(char)
     if 65 <= ele <= 90:
         ele += shift
-        return ele + 26 if ele < 65 else ele - 26 if ele > 90 else ele
+        return chr(ele + 26) if ele < 65 else chr(ele - 26) if ele > 90 else chr(ele)
     elif 97 <= ele <= 122:
         ele += shift
-        return ele + 26 if ele < 97 else ele - 26 if ele > 122 else ele
+        return chr(ele + 26) if ele < 97 else chr(ele - 26) if ele > 122 else chr(ele)
     else:
-        return char
+        return chr(char)
 
 
 def fun_applycaesarcipher(msg, shift):
