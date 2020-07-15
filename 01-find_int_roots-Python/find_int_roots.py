@@ -10,4 +10,4 @@ from math import sqrt
 
 def fun_find_int_roots(a, b, c):
     d = b**2 - 4*a*c
-    return sorted(-b-sqrt(d)/(2*a), -b+sqrt(d)/(2*a))
+    return ((-b-sqrt(d))/(2*a), (-b+sqrt(d))/(2*a))
