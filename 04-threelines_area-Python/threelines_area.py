@@ -5,4 +5,4 @@ import math
 
 
 def fun_threelines_area(a, b, c):
-    return 0.25 * ((s1 + s2 + s3) * (s1 + s2 - s3) * (s2 + s3 - s1) * (s3 + s1 - s2))**0.5
+    return int(0.25 * ((a + b + c) * (a + b - c) * (b + c - a) * (c + a - b))**0.5)
