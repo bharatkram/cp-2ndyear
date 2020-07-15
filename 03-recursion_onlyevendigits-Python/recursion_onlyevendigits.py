@@ -10,15 +10,15 @@
 
 
 def onlyEvenDigits(ele, div):
-    if ele // div == 0:
+    if ele // (div / 10) == 0:
         return ele
     secPart = ele % div
     firPart = ele // div
     dig = secPart // (div/10)
     if dig % 2 == 0:
-        return onlyEvenDigits(firPart*div+secPart, div*10)
+        return onlyEvenDigits(int(firPart*div+secPart), div*10)
     else:
-        return onlyEvenDigits(firPart*(div/10)+secPart % (div/10), div)
+        return onlyEvenDigits(int(firPart*(div/10)+secPart % (div/10)), div)
 
 
 def fun_recursion_onlyevendigits(l):
