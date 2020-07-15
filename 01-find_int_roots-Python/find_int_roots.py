@@ -5,9 +5,9 @@
 # the roots are all integers. Your function should return these 2 int roots
 # in increasing order. How does a function return multiple values? Like so:
 # return root1, root2
-import math
+from math import sqrt
 
 
 def fun_find_int_roots(a, b, c):
-    d = math.sqrt(b**2 - 4*a*c)
-    return sorted((-b-d/(2*a), -b+d/(2*a)))
+    d = b**2 - 4*a*c
+    return sorted(-b-sqrt(d)/(2*a), -b+sqrt(d)/(2*a))
