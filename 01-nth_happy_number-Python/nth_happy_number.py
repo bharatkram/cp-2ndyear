@@ -1,5 +1,5 @@
-# Write the function nthHappyNumber(n) which takes a non-negative integer 
-# and returns the nth happy number (where the 0th happy number is 1). 
+# Write the function nthHappyNumber(n) which takes a non-negative integer
+# and returns the nth happy number (where the 0th happy number is 1).
 # Here are some test assertions for you:
 # assert(nthHappyNumber(0) == 1)
 # assert(nthHappyNumber(1) == 7)
@@ -11,5 +11,32 @@
 # assert(nthHappyNumber(7) == 31)
 
 
+def ishappynumber(n):
+    # your code goes here
+    if n < 1:
+        return False
+    pastDict = {}
+    while n != 1:
+        sum = 0
+        while n != 0:
+            sqDig = (n % 10)**2
+            n //= 10
+            sum += sqDig
+        n = sum
+        try:
+            pastDict[n] += 1
+            return False
+        except KeyError:
+            pastDict[n] = 1
+    return True
+
+
 def fun_nth_happy_number(n):
-	return 0
+    # your code goes here
+    present = 1
+    while True:
+        if ishappynumber(present):
+            n -= 1
+        if n == 0:
+            return present
+        present += 1
