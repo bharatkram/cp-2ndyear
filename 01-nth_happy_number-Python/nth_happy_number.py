@@ -32,10 +32,10 @@ def ishappynumber(n):
 
 def fun_nth_happy_number(n):
     # your code goes here
-    present = 1
+    present = 2
     while True:
+        if n == 0:
+            return present - 1
         if ishappynumber(present):
             n -= 1
-        if n == 0:
-            return present
         present += 1
