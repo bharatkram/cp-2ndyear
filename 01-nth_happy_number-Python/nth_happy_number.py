@@ -12,7 +12,6 @@
 
 
 def ishappynumber(n):
-    # your code goes here
     if n < 1:
         return False
     pastDict = {}
