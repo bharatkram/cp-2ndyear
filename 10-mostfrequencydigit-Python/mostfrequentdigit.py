@@ -4,7 +4,7 @@
 
 def mostfrequentdigit(n):
     # your code goes here
-    lis = [0 * 10]
+    lis = [0] * 10
     while n != 0:
         lis[n % 10] += 1
         n //= 10
