@@ -8,7 +8,7 @@ def fun_replace(s1, s2, s3):
     # your code goes here
     pos, lenToBeReplaced, diff = 0, len(s2), len(s3) - len(s2)
     while pos <= len(s1):
-        if s1[pos: lenToBeReplaced + 1] == s2:
+        if s1[pos: pos + lenToBeReplaced] == s2:
             s1 = s1[:pos] + s3 + s1[lenToBeReplaced + 1:]
             pos += diff
         else:
