@@ -11,5 +11,6 @@ def smallestdifference(a):
     pastEle = a[0]
     for i in range(1, len(a)):
         diff = abs(pastEle - a[i])
-        smallest = diff if diff < smallest else smallest
+        smallest = diff if ((diff < smallest) or (
+            smallest == -1)) else smallest
     return smallest
