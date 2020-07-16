@@ -13,4 +13,5 @@ def smallestdifference(a):
         diff = abs(pastEle - a[i])
         smallest = diff if ((diff < smallest) or (
             smallest == -1)) else smallest
+        pastEle = a[i]
     return smallest
