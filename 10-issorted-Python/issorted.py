@@ -9,7 +9,7 @@ def issorted(a):
     # your code goes here
     try:
         pastEle = a[0]
-        diff = (a[0] > a[1])
+        diff = (a[0] >= a[1])
         for ele in a:
             if diff != (pastEle >= ele) or (pastEle <= ele):
                 return False
