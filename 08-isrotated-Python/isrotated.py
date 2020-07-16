@@ -22,8 +22,8 @@ def isrotated(str1, str2):
         check = str1[1]
         direction = 1 if check == str2[index +
                                        1] else -1 if check == str2[index - 1] else 0
-        ret = checkfunction(str1, str2 if direction ==
-                            1 else str2[::-1], index) if direction != 0 else False
+        ret = checkfunction(str1, (str2, index) if direction ==
+                            1 else (str2[::-1], len(str2)-index)) if direction != 0 else False
         if ret == True:
             return True
     return False
