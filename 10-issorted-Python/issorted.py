@@ -11,7 +11,7 @@ def issorted(a):
         pastEle = a[0]
         diff = (a[0] >= a[1])
         for ele in a:
-            if diff != (pastEle >= ele) or (pastEle <= ele):
+            if diff != (pastEle >= ele):
                 return False
             pastEle = ele
         return True
