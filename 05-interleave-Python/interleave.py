@@ -20,5 +20,5 @@ def fun_interleave(s1, s2):
         except IndexError:
             break
     # ret += s1[l:] + s2[l:]
-    return ret + s1[pos:] + s2[pos:]
     # return ret
+    return ret + s1[pos:] + s2[pos:]
