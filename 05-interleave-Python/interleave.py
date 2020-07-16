@@ -12,7 +12,7 @@ def fun_interleave(s1, s2):
     pos = 0
     ret = ""
     # for i in range(l):
-    while true:
+    while True:
         # ret += s1[i] + s2[i]
         try:
             ret += s1[pos] + s2[pos]
