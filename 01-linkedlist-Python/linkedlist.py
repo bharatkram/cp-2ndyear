@@ -58,11 +58,13 @@ class LinkedList(object):
         if self.head.value == value:
             self.head = self.head.next
             return
-        ele = self.head.next
+        past = self.head
+        ele = past.next
         if ele == None:
             return
-        past = self.head
         while ele.value != value:
             past = ele
             ele = ele.next
+            if ele.next == None:
+                return
         past.next = ele.next
