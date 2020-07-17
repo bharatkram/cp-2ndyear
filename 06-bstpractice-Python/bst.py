@@ -26,16 +26,16 @@ class BST(object):
             else:
                 break
 
-    def printAll(current):
+    def printAll(self, current):
         if current == None:
             return
         print(current.value)
-        printAll(current.left)
-        printAll(current.right)
+        self.printAll(current.left)
+        self.printAll(current.right)
 
     def printSelf(self):
         # Your code goes here
-        printAll(self.root)
+        self.printAll(self.root)
 
     def search(self, find_val):
         # Your code goes here
