@@ -30,4 +30,5 @@ def fun_nth_additive_prime(n):
     return current
 
 
-print(isPrime(23))
+print(isPrime(41))
+print(isAdditivePrime(41))
