@@ -10,7 +10,7 @@ class BST(object):
         self.root = Node(root)
 
     def insert(self, new_val):
-        # Your code goes here
+        # Your code goes here]
         current = self.root
         if current is None:
             self.root = Node(new_val)
@@ -43,7 +43,7 @@ class BST(object):
 
     def search(self, find_val):
         # Your code goes here
-        if find_val is None:
+        if not isinstance(find_val, int):
             return False
         current = self.root
         while current is not None:
