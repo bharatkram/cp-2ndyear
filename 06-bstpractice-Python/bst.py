@@ -39,10 +39,10 @@ class BST(object):
 
     def search(self, find_val):
         # Your code goes here
-        if find_val == None:
+        if find_val is None:
             return False
         current = self.root
-        while current != None:
+        while current is not None:
             if current.value == find_val:
                 return True
             elif current.value < find_val:
