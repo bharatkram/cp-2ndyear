@@ -13,7 +13,7 @@ def findzerowithbisection(x, epsilon):
     start = 0
     end = x
     mid = (start+end)/2
-    while mid**2 - x >= epsilon:
+    while mid**2 - x <= epsilon:
         if mid**2 < x:
             start = mid
         else:
