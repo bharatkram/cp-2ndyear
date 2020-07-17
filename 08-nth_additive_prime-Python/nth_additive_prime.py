@@ -24,7 +24,10 @@ def fun_nth_additive_prime(n):
         return 2
     current = 2
     while n != 0:
-        if isPrime(current) and isAdditivePrime(sum(list(map(int, list(str(n)))))):
+        if isPrime(current) and isAdditivePrime(n):
             n -= 1
         current += 1
     return current
+
+
+print(isPrime(23))
