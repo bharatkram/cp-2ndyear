@@ -57,6 +57,7 @@ class LinkedList(object):
         # Your code goes here
         if self.head.value == value:
             self.head = self.head.next
+            return
         ele = self.head.next
         if ele == None:
             return
