@@ -5,7 +5,7 @@
 
 
 def isPrime(n):
-    for i in range(2, int(n**0.5)):
+    for i in range(2, int(n**0.5) + 1):
         if n % i == 0:
             return False
     return True
@@ -20,9 +20,11 @@ def isAdditivePrime(n):
 
 
 def fun_nth_additive_prime(n):
+    if n == 0:
+        return 2
     current = 2
     while n != 0:
-        if isPrime(current) and isAdditivePrime(n):
+        if isPrime(current) and isAdditivePrime(sum(list(map(int, list(str(n)))))):
             n -= 1
         current += 1
     return current
