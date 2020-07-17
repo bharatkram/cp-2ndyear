@@ -39,6 +39,8 @@ class BST(object):
 
     def search(self, find_val):
         # Your code goes here
+        if find_val == None:
+            return False
         current = self.root
         while current != None:
             if current.value == find_val:
