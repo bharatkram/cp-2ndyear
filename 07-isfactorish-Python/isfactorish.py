@@ -12,6 +12,7 @@
 
 
 def fun_isfactorish(n):
+    n = abs(n)
     if n // 1000 > 0 or n // 100 == 0:
         return False
     temp = n
@@ -21,7 +22,7 @@ def fun_isfactorish(n):
         if num in numLis:
             return False
         numLis.append(num)
-        num //= 10
+        temp //= 10
     for num in numLis:
         if n % num != 0:
             return False
