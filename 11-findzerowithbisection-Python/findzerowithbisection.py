@@ -19,4 +19,4 @@ def findzerowithbisection(x, epsilon):
         elif mid*mid < x:
             end = mid
         else:
-            start = start
+            start = mid
