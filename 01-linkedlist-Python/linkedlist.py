@@ -63,8 +63,8 @@ class LinkedList(object):
         if ele == None:
             return
         while ele.value != value:
-            past = ele
-            ele = ele.next
             if ele.next == None:
                 return
+            past = ele
+            ele = ele.next
         past.next = ele.next
