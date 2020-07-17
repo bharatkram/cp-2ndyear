@@ -24,6 +24,6 @@ def fun_isfactorish(n):
         numLis.append(num)
         temp //= 10
     for num in numLis:
-        if num != 0 and n % num != 0:
+        if num != 0 or n % num != 0:
             return False
     return True
