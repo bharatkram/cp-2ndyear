@@ -8,36 +8,71 @@ particular value.
 Then, use "Test Run" and "Submit" to run the test cases
 at the bottom."""
 
+
 class Element(object):
     def __init__(self, value):
         self.value = value
         self.next = None
-        
+
+
 class LinkedList(object):
     def __init__(self, head=None):
         self.head = head
-        
+
     def append(self, new_element):
         # Your code goes here
-        pass
-            
+        if self.head == None:
+            self.head = new_element
+        else:
+            current = self.head
+            while current.next != None:
+                current = current.next
+            current.next = new_element
+
     def get_position(self, position):
         """Get an element from a particular position.
         Assume the first position is "1".
         Return "None" if position is not in the list."""
         # Your code goes here
-        pass
-    
+        pos = position - 1
+        current = self.head
+        while pos != 0:
+            current = current.next
+            if current == None:
+                return None
+            pos -= 1
+        return current
+
     def insert(self, new_element, position):
         """Insert a new node at the given position.
         Assume the first position is "1".
         Inserting at position 3 means between
         the 2nd and 3rd elements."""
         # Your code goes here
-        pass
-    
-    
+        pos = position - 1
+        if pos == 0:
+            new_element.next = self.head
+            self.head = new_element
+            return
+        current = self.head
+        while pos != 0:
+            current = current.next
+            pos -= 1
+        new_element = current.next
+        current.next = new_element
+
     def delete(self, value):
         """Delete the first node with a given value."""
         # Your code goes here
-        pass
+        if self.head.value == value:
+            self.head = self.head.next
+        current = self.head.next
+        if current == None:
+            return
+        past = self.head
+        while current.value != value:
+            past = current
+            current = current.next
+            if current == None:
+                return
+        past.next = current.next
