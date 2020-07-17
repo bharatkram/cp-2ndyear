@@ -14,9 +14,9 @@ def findzerowithbisection(x, epsilon):
     end = x
     while end - start >= epsilon:
         mid = (start+end)/2
-        if mid**2 == x:
+        if mid*mid == x:
             return mid
-        elif mid**2 < x:
-            start = mid
+        elif mid*mid < x:
+            end = mid
         else:
-            end = start
+            start = start
