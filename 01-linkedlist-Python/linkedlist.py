@@ -60,8 +60,6 @@ class LinkedList(object):
             return
         past = self.head
         ele = past.next
-        if ele == None:
-            return
         while ele.value != value:
             if ele.next == None:
                 return
