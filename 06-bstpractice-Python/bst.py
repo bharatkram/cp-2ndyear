@@ -12,6 +12,8 @@ class BST(object):
     def insert(self, new_val):
         # Your code goes here
         current = self.root
+        if current is None:
+            self.root = Node(new_val)
         while True:
             if new_val < current.value:
                 if current.left is None:
@@ -20,7 +22,7 @@ class BST(object):
                 else:
                     current = current.left
             elif new_val > current.value:
-                if current.value is None:
+                if current.right is None:
                     current.right = Node(new_val)
                     break
                 else:
