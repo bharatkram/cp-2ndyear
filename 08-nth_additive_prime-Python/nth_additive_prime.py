@@ -24,4 +24,5 @@ def fun_nth_additive_prime(n):
     while n != 0:
         if isPrime(current) and isAdditivePrime(n):
             n -= 1
+        current += 1
     return current
