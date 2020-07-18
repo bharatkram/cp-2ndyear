@@ -24,3 +24,4 @@ def qsort(array, low, high):
 def quicksort(array):
     # Your code goes here
     qsort(array, 0, len(array) - 1)
+    return array
