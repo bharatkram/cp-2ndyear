@@ -23,7 +23,7 @@ def ismostlymagicsquare(a):
     diag2 = []
     for i in range(len(a)):
         col = []
-        for j in range(a[i]):
+        for j in range(len(a[i])):
             col.append(a[j][i])
         if sum(col) != total or sum(a[i]) != total:
             return False
