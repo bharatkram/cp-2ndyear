@@ -10,4 +10,4 @@ def fun_alternatingsum(a):
     for integer in a:
         total += mul*integer
         mul *= -1
-    return total // len(a)
+    return total
