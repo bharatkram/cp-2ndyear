@@ -83,6 +83,8 @@ def playStep2(hand, dice):
             newValue = dice % 10
             dice //= 10
             hand.append(newValue)
+            if newValue == value:
+                return ((1, value), dicetoorderedhand(hand), dice)
             return ((0, value), dicetoorderedhand(hand), dice)
         else:
             hand = [value]
