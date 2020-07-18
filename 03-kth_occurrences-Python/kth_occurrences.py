@@ -10,7 +10,7 @@ def fun_kth_occurrences(s, n):
         if char in charDict.keys():
             charDict[char] += 1
         else:
-            charDict[char] = 1
+            charDict[char] = 0
     for key in charDict.keys():
         if charDict[key] == n:
             return key
