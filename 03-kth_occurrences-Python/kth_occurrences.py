@@ -11,8 +11,8 @@ def fun_kth_occurrences(s, n):
             charDict[char] += 1
         except KeyError:
             charDict[char] = 1
-    lis = charDict.values().sort()
-    n = lis[n]
+    lis = sorted(charDict.values())
+    n = lis[n - 1]
     for key in charDict.keys():
         if charDict[key] == n:
             return key
