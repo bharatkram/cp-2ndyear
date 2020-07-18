@@ -8,6 +8,13 @@
 # inverseLookAndSay([(2,3),(1,8),(3,-10)]) == [3,3,8,-10,-10,-10]
 # inverseLookAndSay([(2,3),(1,8),(4,3)]) == [3,3,8,3,3,3,3])
 
+
 def inverselookandsay(a):
-	# Your code goes here
-	pass
+    # Your code goes here
+    ret = []
+    for tup in a:
+        if tup == ():
+            continue
+        for i in range(tup[0]):
+            ret.append(tup[1])
+    return ret
