@@ -11,10 +11,12 @@ def fun_getaverage(s):
     # your code goes here
     total = 0
     count = 0
-    for ele in s:
-        if isinstance(ele, int):
-            total += ele
+    for ele in s.split(","):
+        try:
+            total += int(ele)
             count += 1
+        except ValueError:
+            continue
     if total == 0 and count == 0:
         return 0
     return total / count
