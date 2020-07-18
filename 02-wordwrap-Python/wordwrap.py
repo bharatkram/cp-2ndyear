@@ -23,7 +23,7 @@ def fun_wordwrap(s, n):
     while pos < len(s):
         char = s[pos]
         ret += char if char != " " else "-"
-        if pos % n == 0 and pos != 0:
+        if (pos + 1) % n == 0 and pos != 0:
             ret += "\n"
         pos += 1
     return ret
