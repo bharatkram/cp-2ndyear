@@ -20,7 +20,7 @@ def fun_wordwrap(s, n):
     # your code goes here
     pos = 0
     ret, s = "", s.strip()
-    while pos <= len(s):
+    while pos < len(s):
         char = s[pos]
         ret += char if char != " " else "-"
         if pos % n == 0 and pos != 0:
