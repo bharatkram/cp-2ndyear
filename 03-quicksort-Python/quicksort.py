@@ -17,7 +17,7 @@ def partition(array, low, high):
 def qsort(array, low, high):
     if low < high:
         pi = partition(array, low, high)
-        qsort(array, low, pi + 1)
+        qsort(array, low, pi - 1)
         qsort(array, pi + 1, high)
 
 
