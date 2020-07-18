@@ -7,12 +7,11 @@ def fun_kth_occurrences(s, n):
     # your code goes here
     charDict = {}
     for char in s:
-        try:
+        if char in charDict.keys():
             charDict[char] += 1
-        except KeyError:
+        else:
             charDict[char] = 1
-    lis = sorted(charDict.values())
-    n = lis[n - 1]
+    n = sorted(charDict.values(), reverse=True)[n - 1]
     for key in charDict.keys():
         if charDict[key] == n:
             return key
