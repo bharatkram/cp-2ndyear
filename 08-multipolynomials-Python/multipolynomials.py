@@ -8,12 +8,13 @@
 
 def multipolynomials(p1, p2):
     # Your code goes here
-    ret = [0] * (len(p1) + len(p2) - 1)
     l1 = len(p1)
     l2 = len(p2)
+    l3 = l1 + l2 - 1
+    ret = [0] * (l3)
     for i in range(l1):
         exp1 = l1 - (i + 1)
         for j in range(l2):
             exp2 = l2 - (j + 1)
-            ret[exp1 + exp2 - 1] += p1[i]*p2[j]
+            ret[l3 - (exp1 + exp2 + 1)] += p1[i]*p2[j]
     return ret
