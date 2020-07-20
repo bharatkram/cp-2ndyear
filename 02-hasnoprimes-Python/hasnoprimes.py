@@ -3,7 +3,7 @@
 
 
 def isprime(ele):
-    for i in range(2, int(ele**0.5) + 2):
+    for i in range(2, int(ele**0.5) + 1):
         if ele % i == 0:
             return False
     return True
