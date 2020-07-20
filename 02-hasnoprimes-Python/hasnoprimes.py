@@ -5,8 +5,8 @@
 def isprime(ele):
     for i in range(2, int(ele**0.5) + 2):
         if ele % i == 0:
-            return True
-    return False
+            return False
+    return True
 
 
 def fun_hasnoprimes(l):
