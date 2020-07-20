@@ -10,4 +10,4 @@ def fun_matrixmultiply(m1, m2):
         return None
 
     return [[sum(a * b for a, b in zip(m1row, m2col))
-             for m2col in zip(*m2) for m1row in m1]]
+             for m2col in zip(*m2)] for m1row in m1]
