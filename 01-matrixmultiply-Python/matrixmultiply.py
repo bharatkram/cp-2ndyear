@@ -9,5 +9,5 @@ def fun_matrixmultiply(m1, m2):
     if len(m1[0]) != len(m2):
         return None
 
-    ret = [[0] * len(m2[0])] * len(m1)
-    return ret
+    return [[sum(a * b for a, b in zip(m1row, m2col))
+             for m2col in zip(*m2) for m1row in m1]]
