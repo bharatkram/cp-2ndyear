@@ -10,7 +10,7 @@ def hasProperty(num):
     while num != 0:
         arr[num % 10] += 1
         num //= 10
-    return 0 in arr
+    return 0 not in arr
 
 
 def nthwithproperty309(n):
