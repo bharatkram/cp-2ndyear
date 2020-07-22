@@ -14,8 +14,9 @@ def kaprekarNumber(num):
     while squared // 10**pwr != 0:
         fir = squared // 10**pwr
         sec = squared % 10**pwr
-        if fir+sec == num:
+        if sec != 0 and fir+sec == num:
             return True
+        pwr += 1
     return False
 
 
@@ -24,7 +25,7 @@ def fun_nth_kaprekarnumber(n):
     if n == 0:
         return 1
     num = 8
-    while n != -1:
+    while n != 0:
         num += 1
         if kaprekarNumber(num):
             n -= 1
