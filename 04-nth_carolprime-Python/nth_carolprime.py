@@ -19,9 +19,10 @@ def isPrime(num):
 def fun_nth_carolprime(n):
     # your code goes here
     k = 1
+    carolNumber = 0
     while n != -1:
         k += 1
         carolNumber = (2**k - 1)**2 - 2
         if isPrime(carolNumber):
             n -= 1
-    return k
+    return carolNumber
