@@ -26,8 +26,8 @@ def longestdigitrun(n):
         else:
             tempCount += 1
 
-    if count > tempCount:
-        digit = tempDigit
-    elif count == tempCount and tempDigit < digit:
-        digit = tempDigit
+    # if count > tempCount:
+    #     digit = tempDigit
+    # elif count == tempCount and tempDigit < digit:
+    #     digit = tempDigit
     return digit
