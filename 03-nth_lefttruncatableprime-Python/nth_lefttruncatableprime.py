@@ -15,11 +15,16 @@ def isPrime(num):
 
 
 def isLeftTruncablePrime(num):
+    if not isPrime(num):
+        return False
     pwr = 1
+    prev = 0
     while num // 10**pwr > 0:
-        if not isPrime(num % 10**pwr):
+        part = num % 10**pwr
+        if part == prev or not isPrime(part):
             return False
         pwr += 1
+        prev = part
     return True
 
 
