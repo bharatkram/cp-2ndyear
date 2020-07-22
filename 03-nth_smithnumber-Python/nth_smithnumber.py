@@ -29,7 +29,7 @@ def primeFactors(n):
 
 
 def isSmithNumber(n):
-    lisOfFactors = [sumOfDigits(factor) for factor in primeFactors(n)]
+    lisOfFactors = [sumOfDigits(f) for f in primeFactors(n)]
     return sumOfDigits(n) == sum(lisOfFactors)
 
 
