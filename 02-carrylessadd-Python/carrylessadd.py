@@ -9,9 +9,11 @@ def fun_carrylessadd(x, y):
     # your code goes here
     ret = 0
     mul = 0
-    while x > 0 or y > 0:
-        dig1 = x % 10**mul
-        dig2 = y % 10**mul
+    while x > 0 and y > 0:
+        dig1 = x % 10
+        dig2 = y % 10
         ret += ((dig1+dig2) % 10) * 10**mul
         mul += 1
+        x //= 10
+        y //= 10
     return ret + x * 10**mul if x > 0 else ret + y * 10**mul
