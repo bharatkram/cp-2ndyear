@@ -18,6 +18,6 @@ def nthwithproperty309(n):
     num = 308
     while n != -1:
         num += 1
-        if hasProperty(num):
+        if hasProperty(num**5):
             n -= 1
     return num
