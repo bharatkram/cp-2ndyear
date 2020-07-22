@@ -14,7 +14,7 @@ def sumOfDigits(n):
     while n != 0:
         total += n % 10
         n //= 10
-    return total
+    return total if total < 10 else sumOfDigits(total)
 
 
 def primeFactors(n):
