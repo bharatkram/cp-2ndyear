@@ -9,13 +9,6 @@
 # for primality (and you may need to think about that hint for a while for it to make sense!).
 
 
-def isPrime(num):
-    for i in range(2, int(num**0.5) + 1):
-        if num % i == 0:
-            return False
-    return True
-
-
 def fun_nth_carolprime(n):
     # your code goes here
     k = 1
@@ -23,6 +16,5 @@ def fun_nth_carolprime(n):
     while n != -1:
         k += 1
         carolNumber = (2**k - 1)**2 - 2
-        # if isPrime(carolNumber):
         n -= 1
     return carolNumber
