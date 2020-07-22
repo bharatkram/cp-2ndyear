@@ -8,6 +8,7 @@
 
 def longestdigitrun(n):
     # Your code goes here
+    n = abs(n)
     digit = 10
     count = 0
     tempCount, tempDigit = 0, 0
@@ -26,4 +27,8 @@ def longestdigitrun(n):
         else:
             tempCount += 1
 
+        if count > tempCount:
+            digit = tempDigit
+        elif count == tempCount and tempDigit < digit:
+            digit = tempDigit
     return digit
