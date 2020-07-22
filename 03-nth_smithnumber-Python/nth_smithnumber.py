@@ -19,16 +19,18 @@ def sumOfDigits(n):
 
 def primeFactors(n):
     lis = []
-    for i in range(2, int(sqrt(n))+1):
+    for i in range(2, int(n//2)+1):
         while n % i == 0:
             n //= i
             lis.append(i)
-    return lis
+        if n == 1:
+            break
+    return (lis, False if n > 2 else True)
 
 
 def isSmithNumber(n):
-    lisOfFactors = primeFactors(n)
-    return sumOfDigits(n) == sumOfDigits(sum(lisOfFactors))
+    lisOfFactors, flag = primeFactors(n)
+    return flag and sumOfDigits(n) == sumOfDigits(sum(lisOfFactors))
 
 
 def fun_nth_smithnumber(n):
