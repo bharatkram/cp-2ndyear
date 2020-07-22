@@ -14,7 +14,7 @@ def sumOfDigits(n):
     while n != 0:
         total += n % 10
         n //= 10
-    return total if total < 10 else sumOfDigits(total)
+    return total
 
 
 def primeFactors(n):
@@ -29,8 +29,8 @@ def primeFactors(n):
 
 
 def isSmithNumber(n):
-    lisOfFactors = primeFactors(n)
-    return sumOfDigits(n) == sumOfDigits(sum(lisOfFactors))
+    lisOfFactors = [sumOfDigits(factor) for factor in primeFactors(n)]
+    return sumOfDigits(n) == sum(lisOfFactors)
 
 
 def fun_nth_smithnumber(n):
