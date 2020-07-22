@@ -17,7 +17,7 @@ def longestdigitrun(n):
         n //= 10
         if dig != tempDigit:
             if tempCount > count:
-                count = tempCount
+                count = tempCount + 1
                 digit = tempDigit
             elif tempCount == count:
                 digit = tempDigit if tempDigit < digit else digit
