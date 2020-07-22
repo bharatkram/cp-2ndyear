@@ -36,6 +36,6 @@ def fun_nth_smithnumber(n):
     num = 3
     while n != -1:
         num += 1
-        if isSmithNumber(n):
+        if isSmithNumber(num):
             n -= 1
     return num
