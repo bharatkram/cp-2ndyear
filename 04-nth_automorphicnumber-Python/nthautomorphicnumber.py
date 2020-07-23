@@ -29,7 +29,7 @@ def nthautomorphicnumbers(n):
         endWithSix = 7109376
         fiveDigits = 10**7
         sixDigits = 10**7
-        while n >= 14:
+        while n > 14:
             flag5, flag6 = True, True
             while flag5:
                 for digit in range(9, -1, -1):
