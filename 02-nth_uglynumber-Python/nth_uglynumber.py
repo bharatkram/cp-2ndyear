@@ -8,7 +8,7 @@ def isUglyNumber(num):
         num //= 2
     for i in range(3, 6):
         while num % i == 0:
-            num //= 2
+            num //= i
     return True if num == 1 else False
 
 
