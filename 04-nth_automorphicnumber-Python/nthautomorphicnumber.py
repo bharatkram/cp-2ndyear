@@ -17,7 +17,7 @@ def isAutomorphic(num):
 
 def nthautomorphicnumbers(n):
     # Your code goes here
-    if n <= 14:
+    if n <= 12:
         num = -1
         while n != 0:
             num += 1
@@ -27,11 +27,11 @@ def nthautomorphicnumbers(n):
     else:
         pos = n
         lis = []
-        endWithFive = 2890625
-        endWithSix = 7109376
-        fiveDigits = 10**7
-        sixDigits = 10**7
-        while n >= 12:
+        endWithFive = 890625
+        endWithSix = 109376
+        fiveDigits = 10**6
+        sixDigits = 10**6
+        while n >= 10:
             flag5, flag6 = True, True
             while flag5:
                 for digit in range(9, -1, -1):
@@ -60,4 +60,4 @@ def nthautomorphicnumbers(n):
             lis.append(endWithFive)
             lis.append(endWithSix)
             n -= 2
-        return sorted(lis)[pos - 15]
+        return sorted(lis)[pos - 13]
