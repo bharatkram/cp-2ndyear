@@ -6,14 +6,13 @@
 
 
 def isPalindrome(n):
-    temp = n
     rev = revNumber(n)
     return rev == n
 
 
 def revNumber(n):
     rev = 0
-    while temp != 0:
+    while n != 0:
         rev = rev * 10 + (n % 10)
         n //= 10
     return rev
