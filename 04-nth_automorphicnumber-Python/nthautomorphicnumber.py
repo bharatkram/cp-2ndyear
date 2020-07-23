@@ -56,7 +56,7 @@ def nthautomorphicnumbers(n):
                             sixDigits *= 10
                             break
             n -= 2
-        if n % 2 != 0:
+        if n % 2 == 0:
             return min(endWithFive, endWithSix)
         else:
             return max(endWithFive, endWithSix)
