@@ -17,8 +17,8 @@ def isAutomorphic(num):
 
 def nthautomorphicnumbers(n):
     # Your code goes here
-    num = -1
     if n <= 14:
+        num = -1
         while n != 0:
             num += 1
             if isAutomorphic(num):
@@ -29,7 +29,7 @@ def nthautomorphicnumbers(n):
         endWithSix = 7109376
         fiveDigits = 10**7
         sixDigits = 10**7
-        while num >= 14:
+        while n >= 14:
             flag5, flag6 = True, True
             while flag5:
                 for digit in range(9, -1, -1):
@@ -55,8 +55,8 @@ def nthautomorphicnumbers(n):
                             endWithSix = newNum
                             sixDigits *= 10
                             break
-            num -= 2
-        if num % 2 != 0:
+            n -= 2
+        if n % 2 != 0:
             return min(endWithFive, endWithSix)
         else:
             return max(endWithFive, endWithSix)
