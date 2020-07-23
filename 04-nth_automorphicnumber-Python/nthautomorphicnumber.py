@@ -25,11 +25,13 @@ def nthautomorphicnumbers(n):
                 n -= 1
         return num
     else:
+        pos = n
+        lis = []
         endWithFive = 2890625
         endWithSix = 7109376
         fiveDigits = 10**7
         sixDigits = 10**7
-        while n > 14:
+        while n >= 14:
             flag5, flag6 = True, True
             while flag5:
                 for digit in range(9, -1, -1):
@@ -56,7 +58,7 @@ def nthautomorphicnumbers(n):
                             sixDigits *= 10
                             break
             n -= 2
-        if n % 2 == 0:
+        if n % 2 != 0:
             return min(endWithFive, endWithSix)
         else:
             return max(endWithFive, endWithSix)
