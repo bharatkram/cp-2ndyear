@@ -5,7 +5,7 @@
 
 def permutations(inp, i, l, result):
     if i == l:
-        result.append(tup(inp))
+        result.append(tuple(inp))
     else:
         for j in range(i, l):
             inp[i], inp[j] = inp[j], inp[i]
