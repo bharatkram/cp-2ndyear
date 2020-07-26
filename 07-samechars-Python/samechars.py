@@ -8,9 +8,9 @@
 
 def samechars(tup):
     # Your code goes here
-    if not isinstance(s1, str) or not isinstance(s2, str):
+    if not isinstance(tup[0], str) or not isinstance(tup[1], str):
         return False
-    s1, s2 = tup.sort(key=lambda x: len(x))
+    s1, s2 = list(tup).sort(key=lambda x: len(x))
 
     s1Dict = {}
     for char in s1:
