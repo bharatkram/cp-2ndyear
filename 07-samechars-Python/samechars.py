@@ -21,5 +21,7 @@ def samechars(tup):
             check = s1Dict[char]
         except KeyError:
             return False
+        finally:
+            s1Dict[char] = False
 
-    return True
+    return True if True not in s1Dict.keys() else False
