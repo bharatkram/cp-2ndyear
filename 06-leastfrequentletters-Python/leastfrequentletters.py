@@ -12,10 +12,13 @@ def leastfrequentletters(s):
     # Your code goes here
     arr = [100] * 26
     for char in s:
-        pos = ord(char) - 97
-        try:
+        pos = ord(char)
+        if not (65 <= pos <= 91 or 97 <= pos <= 122):
+            continue
+            pos -= 97
+        if pos >= 0:
             arr[pos] = 1 if arr[pos] == 100 else arr[pos] + 1
-        except IndexError:
+        else:
             pos += 32
             arr[pos] = 1 if arr[pos] == 100 else arr[pos] + 1
 
