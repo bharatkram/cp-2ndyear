@@ -5,11 +5,11 @@
 
 def permutations(inp, i, l, result):
     if i == l:
-        result.append("".join(inp))
+        result.append(tup(inp))
     else:
         for j in range(i, l):
             inp[i], inp[j] = inp[j], inp[i]
-            permutations(inp, i + 1, l)
+            permutations(inp, i + 1, l, result)
             inp[i], inp[j] = inp[j], inp[i]
 
 
