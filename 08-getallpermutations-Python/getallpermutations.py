@@ -17,4 +17,4 @@ def getallpermutations(x):
     # Your code goes here
     ret = []
     permutations(list(x), 0, len(x), ret)
-    return ret
+    return sorted(ret)
