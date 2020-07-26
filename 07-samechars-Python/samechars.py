@@ -24,4 +24,4 @@ def samechars(tup):
         finally:
             s1Dict[char] = False
 
-    return True if True not in s1Dict.keys() else False
+    return True if True not in s1Dict.values() else False
